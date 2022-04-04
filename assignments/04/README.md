@@ -74,6 +74,7 @@ Baca penjelasan mengenai kode di atas pada <https://dudung.github.io/bugx/0026/>
 ### answer 1
 Apakah penjelasan kode dia atas sudah dibaca atau hadir pada kuliah?
 ```
+Ya
 ```
 
 ## question 2
@@ -82,9 +83,15 @@ Modifikasi program yang diberikan sehingga dapat menggambarkan gelombang yang me
 ### answer 2
 Potongan kode yang perlu disisipkan adalah
 ```
+ def animate(t):
+    t = 0.01*t
+    x = np.linspace(0, 2, 1000)
+    y = np.sin(np.pi * (x-t)) #T = 2, Lambda = 2
+    line.set_data(x, y)
+    return line,
 ```
 dan hasil berkas gifnya adalah \
-![gif file from simulation wave to right]()
+![gif 1](https://user-images.githubusercontent.com/60744294/161561830-b00332d0-3a3c-4795-a13c-2cacb54f85ab.gif)
 
 
 ## question 3
@@ -93,9 +100,15 @@ Modifikasi program yang diberikan sehingga dapat menggambarkan gelombang yang me
 ### answer 3
 Potongan kode yang perlu disisipkan adalah
 ```
+ def animate(t):
+    t = 0.01*t
+    x = np.linspace(0, 2, 1000)
+   y = np.sin(np.pi * (x+t)) #T = 2, Lambda = 2
+    return line,
 ```
 dan hasil berkas gifnya adalah \
-![gif file from simulation wave to left]()
+![gif 2](https://user-images.githubusercontent.com/60744294/161561981-09fc17d5-f872-416a-995f-d9cc75801cce.gif)
+
 
 
 ## question 4
@@ -104,6 +117,11 @@ Modifikasi program yang diberikan sehingga dapat menggambarkan gelombang stasion
 ### answer 4
 Potongan kode yang perlu disisipkan adalah
 ```
+ def animate(t):
+    t = 0.01*t
+    x = np.linspace(0, 2, 1000)
+    y = np.sin(np.pi * x) * np.cos(np.pi * t)	
+
 ```
 dan hasil berkas gifnya adalah \
-![gif file from simulation wave stationary]()
+![gif 3](https://user-images.githubusercontent.com/60744294/161561993-59f13dbd-126c-4d71-9316-072f00c01d0e.gif)
